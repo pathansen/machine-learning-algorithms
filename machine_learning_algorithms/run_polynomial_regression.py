@@ -1,9 +1,12 @@
 import random as random
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 from models.polynomial_regression import PolynomialRegression
 
+# Use custom styling from file
+matplotlib.rc_file('../plotstyle')
 
 # Generate data
 random.seed(0)
@@ -31,9 +34,12 @@ for i in range(50):
         y_bf[i] += weights[j][0] * x_bf[i]**j
 
 
-plt.scatter(X[:, 1], y, color='b', label='Samples')
+plt.scatter(X[:, 1], y, color='b', s=50, label='Samples')
 plt.plot(x_bf, y_bf, color='r', label='Fitted Model')
 plt.xlim(-2, 12)
 plt.ylim(-5, 45)
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.title('Polynomial Regression with Regularization')
 plt.legend()
 plt.show()

@@ -1,0 +1,31 @@
+## Figure
+figure.figsize     : 12, 8   # figure size in inches
+figure.dpi         : 72
+
+## Lines
+lines.linewidth     : 2.5
+lines.antialiased   : True
+
+## Axes
+axes.facecolor      : eeeeee
+axes.edgecolor      : black
+axes.grid           : True
+
+xtick.color         : black
+xtick.direction     : out
+ytick.color         : black
+ytick.direction     : out
+
+## Grid
+grid.color          : gray
+grid.linestyle      : dotted
+grid.linewidth      : 1.5
+
+## Fonts
+font.family         : serif
+font.size           : 18.0
+mathtext.fontset    : cm
+
+## Legend
+legend.loc          : best
+legend.framealpha   : 0.9

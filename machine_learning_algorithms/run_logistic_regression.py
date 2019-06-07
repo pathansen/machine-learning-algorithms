@@ -1,8 +1,12 @@
 import random as random
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 from models.logistic_regression import LogisticRegression
+
+# Use custom styling from file
+matplotlib.rc_file('../plotstyle')
 
 
 def sigmoid(x):
@@ -28,7 +32,10 @@ x_bf = np.linspace(0, 6, dtype='float32')
 y_bf = np.array([sigmoid(weights[0][0] + x * weights[1][0]) for x in x_bf],
                 dtype='float32')
 
-plt.scatter(X[:, 1], y, color='b', label='Samples')
+plt.scatter(X[:, 1], y, color='b', s=75, label='Samples')
 plt.plot(x_bf, y_bf, color='r', label='Fitted Model')
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.title('Logistic Regression')
 plt.legend()
 plt.show()

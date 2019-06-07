@@ -1,8 +1,12 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 from models.perceptron import Perceptron
 
+
+# Use custom styling from file
+matplotlib.rc_file('../plotstyle')
 
 # Data for AND gate
 X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]], dtype='float32')
@@ -29,9 +33,12 @@ x_fit, y_fit = np.linspace(-1, 2, 100), []
 for x in x_fit:
     y_fit.append(-(weights[0, 0] * x + bias[0, 0]) / weights[0, 1])
 
-plt.scatter(X[:, 0], X[:, 1], color='blue', label='Samples')
+plt.scatter(X[:, 0], X[:, 1], s=100, color='blue', label='Samples')
 plt.plot(x_fit, y_fit, color='red', label='Decision Boundary')
 plt.xlim(-0.2, 1.2)
 plt.ylim(-0.2, 1.2)
+plt.xlabel('Feature $x_1$')
+plt.ylabel('Feature $x_2$')
+plt.title('Perceptron')
 plt.legend()
 plt.show()
