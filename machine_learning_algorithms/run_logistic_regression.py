@@ -13,7 +13,8 @@ def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-1 * x))
 
 
-# Generate data
+# Data from:
+# https://en.wikipedia.org/wiki/Logistic_regression#Probability_of_passing_an_exam_versus_hours_of_study
 X = np.array([0.50, 0.75, 1.00, 1.25, 1.50, 1.75, 1.75, 2.00, 2.25, 2.50,
               2.75, 3.00, 3.25, 3.50, 4.00, 4.25, 4.50, 4.75, 5.00, 5.50],
              dtype='float32')
