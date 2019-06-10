@@ -25,8 +25,8 @@ class PolynomialRegression(object):
         X, y = self.data, self.labels
 
         for i in range(order - 1):
-            X = np.concatenate((X, np.power(X[:, 1], i + 2).reshape(20, 1)),
-                               axis=1)
+            X = np.concatenate((X, np.power(X[:, 1], i + 2).reshape(X.shape[0],
+                                1)), axis=1)
 
         if beta == 0:
             R = np.matmul(X.T, X)
