@@ -28,7 +28,12 @@ Install the requirements:
 
     $ pip install -r requirements.txt
 
+---
+
 ## Linear Regression
+
+$ \hat{y} = Xw $
+
 Python model:
 
     from models.linear_regression import LinearRegression
