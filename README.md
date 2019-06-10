@@ -31,9 +31,6 @@ Install the requirements:
 ---
 
 ## Linear Regression
-
-$ \hat{y} = Xw $
-
 Python model:
 
     from models.linear_regression import LinearRegression
