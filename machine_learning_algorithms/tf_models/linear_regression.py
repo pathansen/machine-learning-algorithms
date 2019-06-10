@@ -48,7 +48,3 @@ class LinearRegression(object):
         """
         x = sample
         return tf.matmul(x, self.w)
-
-
-if __name__ == '__main__':
-    print('working')
